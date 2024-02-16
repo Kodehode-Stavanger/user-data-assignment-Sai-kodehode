@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333131;
+}
+/* input-div */
+.input-div {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f172a;
+}
+
+h1 {
+  background: linear-gradient(45deg, #db4ba8, #b653cc, #9f57e2);
+  background-clip: text;
+  color: transparent;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+/* labels */
+label {
+  color: #d9ebff;
+  padding: 15px 1px;
+  text-align: center;
+  font-size: 22px;
+  background-color: #132245;
+  margin: 10px 0;
+}
+/* value fields */
+input,
+select {
+  background-color: #262626;
+  border: none;
+  color: #d9ebff;
+  padding: 10px 5px;
+  font-size: 20px;
+}
+/* form */
+#form-input {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 150px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+/* all the inputs */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* #submit button div */
+#submit-btn {
+  grid-column: span 4;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* submit button */
+#submit-btn input {
+  background: linear-gradient(45deg, #db4ba8, #b653cc, #9f57e2);
+  color: #e0c2f8;
+  cursor: pointer;
+  padding: 15px 10px;
+  text-align: center;
+}
+
+/* output-container */
+#output-container {
+  margin-top: 20px;
+}
+/* heading */
+.heading-container,
+.new-container {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* delete div */
+.delete-class {
+  text-align: center;
+}
+/* Heading container */
+.heading-container {
+  background-color: #171616;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 28px;
+  border: 0.5px solid rgb(142, 131, 109);
+}
+/* Applying alternative colors to the rows */
+.new-container:nth-child(even) {
+  background-color: #262626;
+}
+.new-container:nth-child(odd) {
+  background-color: #494646;
+}
+/* formating the text in all the rows of output container*/
+.heading-container p,
+.new-container p,
+.delete-class {
+  padding: 15px 10px;
+  border: 0.5px solid rgb(101, 90, 68);
+  font-size: 20px;
+  color: #ded1c7;
+  width: 200px;
+}
+
+.new-container p {
+  border-top: none;
+}
+
+/* Delete button */
+.delete-btn {
+  background-image: url("images/delete-btn.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  border: none;
+  cursor: pointer;
+}
