@@ -7,11 +7,13 @@
 body {
   background-color: #333131;
 }
+
 /* input-div */
 .input-div {
   display: flex;
   flex-direction: column;
   background-color: #0f172a;
+  width: 100%;
 }
 
 h1 {
@@ -24,11 +26,12 @@ h1 {
 /* labels */
 label {
   color: #d9ebff;
-  padding: 15px 1px;
+  padding: 10px 5px;
   text-align: center;
-  font-size: 22px;
+  font-size: 20px;
   background-color: #132245;
   margin: 10px 0;
+  width: 250px;
 }
 /* value fields */
 input,
@@ -37,27 +40,32 @@ select {
   border: none;
   color: #d9ebff;
   padding: 10px 5px;
-  font-size: 20px;
+  font-size: 15px;
+  width: 200px;
+  margin: 10px;
 }
 /* form */
+
 #form-input {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 150px;
-  padding: 0 20px;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  margin: o auto;
+  width: 100%;
 }
 
 /* all the inputs */
 .form-row {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
+  /* margin-bottom: 10px; */
 }
 
 /* #submit button div */
 #submit-btn {
-  grid-column: span 4;
   margin: 0 auto;
   cursor: pointer;
 }
@@ -67,7 +75,7 @@ select {
   background: linear-gradient(45deg, #db4ba8, #b653cc, #9f57e2);
   color: #e0c2f8;
   cursor: pointer;
-  padding: 15px 10px;
+  padding: 10px 2px;
   text-align: center;
 }
 
@@ -75,12 +83,13 @@ select {
 #output-container {
   margin-top: 20px;
 }
+
 /* heading */
 .heading-container,
 .new-container {
   display: flex;
   justify-content: space-around;
-  width: 75%;
+  width: 60%;
   margin: 0 auto;
   text-align: center;
 }
@@ -90,31 +99,22 @@ select {
 }
 /* Heading container */
 .heading-container {
-  background-color: #171616;
+  color: #a4b86b;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 28px;
-  border: 0.5px solid rgb(142, 131, 109);
 }
-/* Applying alternative colors to the rows */
-.new-container:nth-child(even) {
-  background-color: #262626;
-}
-.new-container:nth-child(odd) {
-  background-color: #494646;
-}
+
 /* formating the text in all the rows of output container*/
 .heading-container p,
 .new-container p,
 .delete-class {
-  padding: 15px 10px;
+  font-size: 16px;
+  padding: 8px 0px;
   border: 0.5px solid rgb(101, 90, 68);
-  font-size: 20px;
-  color: #ded1c7;
-  width: 200px;
+  min-width: 160px;
 }
 
-.new-container p {
-  border-top: none;
+.heading-container p {
+  background-color: #171616;
 }
 
 /* Delete button */
@@ -123,8 +123,43 @@ select {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border: none;
   cursor: pointer;
+}
+/* Applying alternative colors to the rows */
+.new-container:nth-child(even) {
+  width: fit-content;
+  background-color: #262626;
+}
+.new-container:nth-child(odd) {
+  width: fit-content;
+  background-color: #494646;
+}
+
+.new-container p {
+  color: rgb(196, 168, 134);
+  border-top: none;
+}
+/* Media Query */
+@media screen and (max-width: 980px) {
+  label {
+    width: 60%;
+  }
+
+  input,
+  select {
+    width: 60%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heading-container,
+  .new-container {
+    width: fit-content;
+  }
 }
