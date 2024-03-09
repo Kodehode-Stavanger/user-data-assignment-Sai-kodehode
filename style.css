@@ -61,7 +61,6 @@ select {
   justify-content: space-around;
   width: 60%;
   margin: 0 auto;
-  /* margin-bottom: 10px; */
 }
 
 /* #submit button div */
@@ -75,13 +74,12 @@ select {
   background: linear-gradient(45deg, #db4ba8, #b653cc, #9f57e2);
   color: #e0c2f8;
   cursor: pointer;
-  padding: 10px 2px;
   text-align: center;
 }
 
 /* output-container */
 #output-container {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 /* heading */
@@ -89,7 +87,7 @@ select {
 .new-container {
   display: flex;
   justify-content: space-around;
-  width: 60%;
+  /* width: 60%; */
   margin: 0 auto;
   text-align: center;
 }
@@ -99,6 +97,7 @@ select {
 }
 /* Heading container */
 .heading-container {
+  width: fit-content;
   color: #a4b86b;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
@@ -107,10 +106,10 @@ select {
 .heading-container p,
 .new-container p,
 .delete-class {
-  font-size: 16px;
+  font-size: 22px;
   padding: 8px 0px;
   border: 0.5px solid rgb(101, 90, 68);
-  min-width: 160px;
+  width: 200px;
 }
 
 .heading-container p {
@@ -157,9 +156,10 @@ select {
     flex-direction: column;
     align-items: center;
   }
-
-  .heading-container,
-  .new-container {
-    width: fit-content;
+  .heading-container p,
+  .new-container p,
+  .delete-class {
+    font-size: 16px;
+    width: 140px;
   }
 }
