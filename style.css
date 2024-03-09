@@ -1,0 +1,165 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333131;
+}
+
+/* input-div */
+.input-div {
+  display: flex;
+  flex-direction: column;
+  background-color: #0f172a;
+  width: 100%;
+}
+
+h1 {
+  background: linear-gradient(45deg, #db4ba8, #b653cc, #9f57e2);
+  background-clip: text;
+  color: transparent;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+/* labels */
+label {
+  color: #d9ebff;
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #132245;
+  margin: 10px 0;
+  width: 250px;
+}
+/* value fields */
+input,
+select {
+  background-color: #262626;
+  border: none;
+  color: #d9ebff;
+  padding: 10px 5px;
+  font-size: 15px;
+  width: 200px;
+  margin: 10px;
+}
+/* form */
+
+#form-input {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  margin: o auto;
+  width: 100%;
+}
+
+/* all the inputs */
+.form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* #submit button div */
+#submit-btn {
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* submit button */
+#submit-btn input {
+  background: linear-gradient(45deg, #db4ba8, #b653cc, #9f57e2);
+  color: #e0c2f8;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* output-container */
+#output-container {
+  margin-top: 40px;
+}
+
+/* heading */
+.heading-container,
+.new-container {
+  display: flex;
+  justify-content: space-around;
+  /* width: 60%; */
+  margin: 0 auto;
+  text-align: center;
+}
+/* delete div */
+.delete-class {
+  text-align: center;
+}
+/* Heading container */
+.heading-container {
+  width: fit-content;
+  color: #a4b86b;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* formating the text in all the rows of output container*/
+.heading-container p,
+.new-container p,
+.delete-class {
+  font-size: 22px;
+  padding: 8px 0px;
+  border: 0.5px solid rgb(101, 90, 68);
+  width: 200px;
+}
+
+.heading-container p {
+  background-color: #171616;
+}
+
+/* Delete button */
+.delete-btn {
+  background-image: url("images/delete-btn.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border: none;
+  cursor: pointer;
+}
+/* Applying alternative colors to the rows */
+.new-container:nth-child(even) {
+  width: fit-content;
+  background-color: #262626;
+}
+.new-container:nth-child(odd) {
+  width: fit-content;
+  background-color: #494646;
+}
+
+.new-container p {
+  color: rgb(196, 168, 134);
+  border-top: none;
+}
+/* Media Query */
+@media screen and (max-width: 980px) {
+  label {
+    width: 60%;
+  }
+
+  input,
+  select {
+    width: 60%;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .heading-container p,
+  .new-container p,
+  .delete-class {
+    font-size: 16px;
+    width: 140px;
+  }
+}

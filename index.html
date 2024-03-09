@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Fitness Tracker App</title>
+  </head>
+  <body>
+    <!-- div for input form -->
+    <div class="input-div">
+      <h1>Fitness Tracker</h1>
+
+      <!-- Form -->
+      <form id="form-input">
+        <!-- Exercise Types -->
+        <div class="form-row">
+          <label for="exercise-type">Exercise type</label>
+          <select name="exercise-type" id="exercise-type" required>
+            <option value="" disabled selected>Select</option>
+            <option value="cycling-value">Cycling</option>
+            <option value="walking-value">Walking</option>
+            <option value="jogging-value">Jogging</option>
+            <option value="running-value">Running</option>
+            <option value="yoga">Yoga</option>
+            <option value="others">Others</option>
+            <option value="none">None</option>
+          </select>
+        </div>
+        <!-- Exercise duration -->
+        <div class="form-row">
+          <label for="exercise-duration">Exercise Duration</label>
+
+          <input
+            type="time"
+            id="exercise-duration"
+            name="exercise-duration-input"
+            required
+          />
+        </div>
+
+        <!-- Water intake -->
+        <div class="form-row">
+          <label for="water-intake">Water intake (in ml)</label>
+
+          <input
+            type="number"
+            id="water-intake"
+            name="water-intake-input"
+            max="10000"
+          />
+        </div>
+
+        <!-- Blood sugar levels -->
+        <div class="form-row">
+          <label for="blood-sugar">Blood sugar level (in mg/dL)</label>
+
+          <input
+            type="number"
+            id="blood-sugar"
+            name="blood-sugar-input"
+            max="500"
+          />
+        </div>
+
+        <!-- Submit button -->
+        <div id="submit-btn" class="form-row">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+    <!-- container to keep entered records -->
+    <div id="output-container"></div>
+  </body>
+</html>
